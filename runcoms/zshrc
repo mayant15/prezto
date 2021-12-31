@@ -12,9 +12,30 @@ fi
 
 # Customize to your needs...
 
+# Convenience aliases
 alias cls='clear'
 alias gs='git status'
 alias gl='git log --oneline'
 alias ga='git add'
 alias gco='git checkout'
+
+# Haskell setup
+[ -f "/home/mayant/.ghcup/env" ] && source "/home/mayant/.ghcup/env" # ghcup-env
+
+# Friendship ended with GCC now clang is new best friend
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+
+# pip installed binaries go here
+export PATH="/home/mayant/.local/bin":$PATH
+
+# CUDA install path
+# export PATH="/usr/local/cuda-11.3/bin":$PATH
+
+# NodeJS
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 
