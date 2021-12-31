@@ -11,3 +11,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+alias cls='clear'
+alias gs='git status'
+alias gl='git log --oneline'
+alias ga='git add'
+alias gco='git checkout'
+
