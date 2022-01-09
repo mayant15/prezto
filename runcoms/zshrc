@@ -22,6 +22,10 @@ alias gco='git checkout'
 # Since I primarily use Zsh in WSL, create an alias to open files with the default Windows app
 alias open='wslview'
 
+# CMake aliases
+alias cmc='cmake .. -GNinja'
+alias cmb='cmake --build .'
+
 # Haskell setup
 [ -f "/home/mayant/.ghcup/env" ] && source "/home/mayant/.ghcup/env" # ghcup-env
 
