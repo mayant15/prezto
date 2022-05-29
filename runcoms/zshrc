@@ -33,6 +33,9 @@ alias cmb='cmake --build .'
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 
+# Tell the llvm-sys crate I have a global llvm installation
+export LLVM_SYS_100_PREFIX=/usr/lib/llvm-10
+
 # pip installed binaries go here
 export PATH="/home/mayant/.local/bin":$PATH
 
