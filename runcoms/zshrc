@@ -42,11 +42,6 @@ export PATH="/home/mayant/.local/bin":$PATH
 # CUDA install path
 # export PATH="/usr/local/cuda-11.3/bin":$PATH
 
-# NodeJS
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Disable PATH_DIRS on WSL, tab completion is slow otherwise https://github.com/sorin-ionescu/prezto/issues/1820
 unsetopt PATH_DIRS
 
