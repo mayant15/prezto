@@ -20,21 +20,21 @@ alias ga='git add'
 alias gco='git checkout'
 
 # Since I primarily use Zsh in WSL, create an alias to open files with the default Windows app
-alias open='wslview'
+# alias open='wslview'
 
 # CMake aliases
 alias cmc='cmake .. -GNinja'
 alias cmb='cmake --build .'
 
 # Haskell setup
-[ -f "/home/mayant/.ghcup/env" ] && source "/home/mayant/.ghcup/env" # ghcup-env
+# [ -f "/home/mayant/.ghcup/env" ] && source "/home/mayant/.ghcup/env" # ghcup-env
 
 # Friendship ended with GCC now clang is new best friend
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 
 # Tell the llvm-sys crate I have a global llvm installation
-export LLVM_SYS_100_PREFIX=/usr/lib/llvm-10
+# export LLVM_SYS_100_PREFIX=/usr/lib/llvm-10
 
 # pip installed binaries go here
 export PATH="/home/mayant/.local/bin":$PATH
@@ -43,5 +43,5 @@ export PATH="/home/mayant/.local/bin":$PATH
 # export PATH="/usr/local/cuda-11.3/bin":$PATH
 
 # Disable PATH_DIRS on WSL, tab completion is slow otherwise https://github.com/sorin-ionescu/prezto/issues/1820
-unsetopt PATH_DIRS
+# unsetopt PATH_DIRS
 
