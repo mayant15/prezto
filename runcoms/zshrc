@@ -39,6 +39,9 @@ export CXX=/usr/bin/clang++
 # pip installed binaries go here
 export PATH="/home/mayant/.local/bin":$PATH
 
+# Other custom installed programs
+export PATH="/home/mayant/Programs/bin":$PATH
+
 # CUDA install path
 # export PATH="/usr/local/cuda-11.3/bin":$PATH
 
