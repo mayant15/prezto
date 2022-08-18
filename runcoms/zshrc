@@ -30,8 +30,8 @@ alias cmb='cmake --build .'
 # [ -f "/home/mayant/.ghcup/env" ] && source "/home/mayant/.ghcup/env" # ghcup-env
 
 # Friendship ended with GCC now clang is new best friend
-export CC=/usr/bin/clang
-export CXX=/usr/bin/clang++
+# export CC=/usr/bin/clang
+# export CXX=/usr/bin/clang++
 
 # Tell the llvm-sys crate I have a global llvm installation
 # export LLVM_SYS_100_PREFIX=/usr/lib/llvm-10
@@ -47,4 +47,7 @@ export PATH="/home/mayant/Programs/bin":$PATH
 
 # Disable PATH_DIRS on WSL, tab completion is slow otherwise https://github.com/sorin-ionescu/prezto/issues/1820
 unsetopt PATH_DIRS
+
+# For starship to work
+setopt prompt_subst interactive_comments
 
