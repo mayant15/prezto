@@ -46,5 +46,5 @@ export PATH="/home/mayant/Programs/bin":$PATH
 # export PATH="/usr/local/cuda-11.3/bin":$PATH
 
 # Disable PATH_DIRS on WSL, tab completion is slow otherwise https://github.com/sorin-ionescu/prezto/issues/1820
-# unsetopt PATH_DIRS
+unsetopt PATH_DIRS
 
