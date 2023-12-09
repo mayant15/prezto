@@ -1,0 +1,31 @@
+#!/usr/bin/env zsh
+
+# opam configuration
+[[ ! -r /home/mayant/.opam/opam-init/init.zsh ]] || source /home/mayant/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# NodeJS
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/home/mayant/.bun/_bun" ] && source "/home/mayant/.bun/_bun"
+
+# sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# LLVM
+export PATH="$PATH:$HOME/programs/llvm-17.0.5/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/programs/llvm-17.0.5/lib"
+
+# Rust
+. "$HOME/.cargo/env"
+
+# Lean
+export PATH="$HOME/.elan/bin:$PATH"
+
