@@ -71,3 +71,10 @@ fi
 if [[ -z "$LESSOPEN" ]] && (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
+
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ];
+then
+	# TODO: Should I source this here? I want this to be sourced before i3
+	source "$HOME/.zshrc"
+  exec Hyprland
+fi

@@ -28,12 +28,11 @@ alias tl='tmux ls'
 alias ta='tmux attach'
 alias to='~/.local/bin/tmux-sessionizer'
 
-# Since I primarily use Zsh in WSL, create an alias to open files with the default Windows app
-# alias open='wslview'
-
 # CMake aliases
 alias cmc='cmake .. -GNinja'
 alias cmb='cmake --build .'
+
+alias lg='lazygit'
 
 # Friendship ended with GCC now clang is new best friend
 export CC=clang
@@ -41,23 +40,6 @@ export CXX=clang++
 
 # pip and other custom installed binaries
 export PATH="$HOME/.local/bin":$PATH
-
-# Disable PATH_DIRS on WSL, tab completion is slow otherwise https://github.com/sorin-ionescu/prezto/issues/1820
-unsetopt PATH_DIRS
-
-# For starship to work
-setopt prompt_subst interactive_comments
-
-# Haskell setup
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# WSL
-unsetopt PATH_DIRS
-export ALACRITTY_CONFIG=/mnt/c/Users/mayan/AppData/Roaming/alacritty/alacritty.yml
 
 function today() {
   FILENAME="$(date +%F).md"
@@ -67,3 +49,10 @@ function today() {
 if [[ -s "${ZDOTDIR:-$HOME}/.zprograms" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprograms"
 fi
+
+export WLR_NO_HARDWARE_CURSORS=1
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
